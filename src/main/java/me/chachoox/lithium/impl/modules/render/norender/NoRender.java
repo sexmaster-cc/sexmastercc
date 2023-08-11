@@ -204,7 +204,7 @@ public class NoRender extends Module {
                 sprintingParticles, time);
         this.offerListeners(new ListenerRenderEntity(this), new ListenerGameLoop(this), new ListenerAnimation(this), new ListenerSplash(this), new ListenerRender(this));
         this.viewBobbing.addObserver(event -> mc.gameSettings.viewBobbing = viewBobbing.getValue());
-        for (Property<?> property : getProperties()) { //not doin halal lol
+        for (Property<?> property : getProperties()) { //not doin halal lol / yall leave an issue saying what u think this means cuz idk what chachoox talking about
             if (!property.getLabel().equals("TimeChanger") && !property.getLabel().equals("CrystalRange") && !property.getLabel().equals("Keybind")) {
                 property.setDescription(String.format("Stops rendering %s.", property.getLabel().toLowerCase()));
             }

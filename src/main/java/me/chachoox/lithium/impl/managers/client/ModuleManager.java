@@ -59,7 +59,6 @@ import me.chachoox.lithium.impl.modules.movement.step.Step;
 import me.chachoox.lithium.impl.modules.movement.tunnelspeed.TunnelSpeed;
 import me.chachoox.lithium.impl.modules.movement.velocity.Velocity;
 import me.chachoox.lithium.impl.modules.other.blocks.BlocksManager;
-import me.chachoox.lithium.impl.modules.other.chat.ChatBridge;
 import me.chachoox.lithium.impl.modules.other.clickgui.ClickGUI;
 import me.chachoox.lithium.impl.modules.other.colours.Colours;
 import me.chachoox.lithium.impl.modules.other.font.CustomFont;
@@ -132,7 +131,6 @@ public class ModuleManager {
         register(new Hud());
         register(new RichPresence());
         register(new BlocksManager());
-        register(new ChatBridge());
 
         /**
          **     Combat Modules

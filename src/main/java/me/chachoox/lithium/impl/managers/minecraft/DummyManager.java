@@ -11,7 +11,6 @@ import me.chachoox.lithium.impl.event.events.network.PacketEvent;
 import me.chachoox.lithium.impl.event.events.update.UpdateEvent;
 import me.chachoox.lithium.impl.event.events.world.WorldClientEvent;
 import me.chachoox.lithium.impl.managers.Managers;
-import me.chachoox.lithium.impl.modules.other.chat.ChatBridge;
 import me.chachoox.lithium.impl.modules.render.displaytweaks.DisplayTweaks;
 import net.minecraft.client.gui.inventory.GuiScreenHorseInventory;
 import net.minecraft.network.play.client.CPacketPlayerTryUseItemOnBlock;
@@ -63,32 +62,12 @@ public class DummyManager extends SubscriberImpl implements Minecraftable {
             @Override
             public void call(WorldClientEvent.Load event) {// shout out to cpv for finding thesec razy bugs
                 if (Lithium.firstTimeLoaded && !sentTut) {
-                    runTutorial();
+                    Logger.getLogger().log("Prefix is [,] string properties & color properties have to be handled with commands.");
                     sentTut = true;
-                    Managers.MODULE.get(ChatBridge.class).setEnabled(true);
                     Managers.MODULE.get(DisplayTweaks.class).setEnabled(true);
                 }
             }
         });
-    }
-
-    public static void runTutorial() {
-        Logger.getLogger().logNoMark("1. Default prefix is comma", 0x21);
-        Logger.getLogger().logNoMark("2. To bind the clickgui use command -> bind clickgui <key>", 0x22);
-        Logger.getLogger().logNoMark("3. Use command -> cmds for a list of commands", 0x23);
-        Logger.getLogger().logNoMark("4. Colour and string properties are hidden use command -> modulename list | for a list of the properties", 0x24);
-        Logger.getLogger().logNoMark("5. To handle colour property values use these commands", 0x25);
-        Logger.getLogger().logNoMark("6. modulename colourpropertyname <r/g/b/a> <value>", 0x26);
-        Logger.getLogger().logNoMark("7. or to set RGB values all in one use command", 0x27);
-        Logger.getLogger().logNoMark("8. modulename colourpropertyname set <value> <value> <value>", 0x28);
-        Logger.getLogger().logNoMark("9. You can also copy/paste colour property values using these commands", 0x29);
-        Logger.getLogger().logNoMark("10. modulename colourpropertyname copy", 0x30);
-        Logger.getLogger().logNoMark("11. modulename colourpropertyname paste", 0x31);
-        Logger.getLogger().logNoMark("12. To handle string properties use command", 0x32);
-        Logger.getLogger().logNoMark("13. modulename stringpropertyname <value>", 0x33);
-        Logger.getLogger().logNoMark("14. Begin a chat message with % to send it into the Chat Bridge", 0x34);
-        Logger.getLogger().logNoMark("15. Use command -> drawn modulename | to hide it on the arraylist", 0x35);
-        Logger.getLogger().logNoMark("16. To change the prefix use command -> prefix <key>", 0x36);
     }
 
     public boolean isValid() {
