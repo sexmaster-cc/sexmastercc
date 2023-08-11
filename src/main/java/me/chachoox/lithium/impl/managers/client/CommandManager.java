@@ -526,7 +526,6 @@ public class CommandManager extends SubscriberImpl {
                 new DisconnectCommand(),
                 new SearchCommand(),
                 new SessionCommand(),
-                new HelpCommand(),
                 new DeathCoordsCommand(),
                 new CraftyCommand(),
                 new LabyCommand(),
