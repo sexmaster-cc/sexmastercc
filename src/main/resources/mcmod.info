@@ -1,0 +1,11 @@
+[
+  {
+    "modid": "lithium",
+    "name": "Lithium",
+    "description": "india hack made by pollosxd",
+    "version": "0.8.0",
+    "mcversion": "${mcversion}",
+    "authorList": ["Chachoox, moneymaker552", "angel"],
+    "credits": "crystalpvpnn's bedtime"
+  }
+]
