@@ -354,7 +354,7 @@ public class ConfigManager implements Minecraftable {
         try {
             File file = new File(PATH, "ignored_players.txt");
             if (!file.exists()) {
-                saveQuiver();
+                saveIgnored();
             }
             FileInputStream fstream = new FileInputStream(file.getAbsolutePath());
             DataInputStream in = new DataInputStream(fstream);
@@ -396,7 +396,7 @@ public class ConfigManager implements Minecraftable {
         try {
             File file = new File(PATH, "filtered_words.txt");
             if (!file.exists()) {
-                saveQuiver();
+                saveChatFilter();
             }
             FileInputStream fstream = new FileInputStream(file.getAbsolutePath());
             DataInputStream in = new DataInputStream(fstream);
